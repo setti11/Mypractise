@@ -1,23 +1,25 @@
 from sys import argv
 
-script, user_name = argv
-prompt = '> '
+script, username = argv
+prompt = '>> '
 
-print (f"Hi {user_name}, I'm the {script} script.")
-print ("I'd like to ask you a few questions.")
-print (f"Do you like me {user_name}?")
+print ("Hello %s, welcome to python script %s" % (username, script))
+
+print ('I"d like to ask you a few questions')
+
+print ("Do you like me %s" % (username))
 likes = input(prompt)
 
-print (f"Where do you live {user_name}?")
-lives = input(prompt)
+print ("Where do you live %s" % (username))
+place = input(prompt)
 
-print ("What kind of computer do you have?")
+print ("What kind of computer you use %s" % (username))
 computer = input(prompt)
 
-print ("Where is this formatter conditions {0} ".format(user_name))
+print ("""
+Alright, so you said %r about liking me.
+You live in %r. It is very nice place.
+And you have a %r computer. Nice.....
+""" % (likes, place, computer))
 
-print(f"""
-Alright, So you said {likes} about liking me.
-You live in {lives} . Not sure where that is. 
-And you have a {computer} computer. Nice.
-""")
+print(f"I like you {username}")
