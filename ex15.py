@@ -1,3 +1,5 @@
+# This script takes file name as input and reads and prints the output on screen
+
 from sys import argv
 
 script, filename = argv
